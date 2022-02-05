@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    color: #343434;
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: #343434;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    font-family: "Khula", sans-serif;
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    text-align: center;
+}
+
+h2 span {
+    display: block;
+    font-size: .875rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* .pc-header
+----------------------------------------- */
+.pc-header {
+    width: 100%;
+    background: #fff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 35px;
+    z-index: 3333;
+}
+
+.pc-header h1 {
+    width: 154px;
+    object-fit: contain;
+}
+
+.pc-gnav-list {
+    display: flex;
+    font-family: "Khula", sans-serif;
+    font-size: 1.25rem;
+    gap: 60px;
+    letter-spacing: 0.13rem;
+}
+
+.pc-gnav-list a:hover {
+    color: #51c6f5;
+}
+
+/* .top-visual
+----------------------------------------- */
+.top-visual {
+    background-image: url(../images/demachi.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-visual img {
+    width: 300px;
+}
+/* #greeting
+----------------------------------------- */
+#greeting {
+    padding: 60px 0;
+}
+
+.gr-1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.gr-2 {
+    text-align: center;
+}
+
+/* #plofile
+----------------------------------------- */
+#plofile {
+    display: flex;
+    color: #DCDFEB;
+}
+
+.plo-left {
+    flex: 1;
+    background-color: #458CAC;
+    padding: 60px 0;
+}
+
+.plo-list {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.plo-right {
+    flex: 1;
+    background-image: url(../images/me.jpg);
+    background-size: cover;
+    background-position: 0 center;
+}
+
+/* #skill
+----------------------------------------- */
+#skill {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#skill img {
+    display: block;
+    margin: 60px auto 60px;
+}
+
+.skill-line {
+    height: 2px;
+    width: 100%;
+    background-color: #343434;
+    margin-bottom: 60px;
+}
+
+#skill p {
+    font-weight: bold;
+}
+
+/* #works
+----------------------------------------- */
+#works {
+    padding: 60px 0;
+    background-image: url(../images/demachi.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* #contact
+----------------------------------------- */
+#contact {
+    padding: 60px 0;
+    background-color: #458CAC;
+    color: #DCDFEB;
+}
+
+.con-list {
+    font-size: 2rem;
+    font-family: 'Gentium Book Basic', serif;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.con-list li:first-child {
+    margin-bottom: 18px;
+}
+
+/* footer
+----------------------------------------- */
+footer {
+    color: #9f9f9f;
+    text-align: center;
+    font-family: "Khula", sans-serif;
+    padding: 40px;
+}
