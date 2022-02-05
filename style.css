@@ -76,7 +76,7 @@ img {
 /* .top-visual
 ----------------------------------------- */
 .top-visual {
-    background-image: url(../images/flower.jpg);
+    background-image: url(img/flower.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: top center;
@@ -126,7 +126,7 @@ img {
 
 .plo-right {
     flex: 1;
-    background-image: url(../images/me.jpg);
+    background-image: url(img/me.jpg);
     background-size: cover;
     background-position: 0 center;
 }
@@ -160,7 +160,7 @@ img {
 ----------------------------------------- */
 #works {
     padding: 60px 0;
-    background-image: url(../images/demachi.jpg);
+    background-image: url(img/flower.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
