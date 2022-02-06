@@ -404,6 +404,10 @@ footer {
 }
 
 @media (max-width: 414px) {
+    body {
+        font-size: .875rem;
+    }
+
     h2 {
         margin-bottom: 30px;
     }
@@ -436,11 +440,6 @@ footer {
     /* #skill */
     .skill-list h3 {
         font-size: 1.25rem;
-    }
-
-    /* #contact */
-    .con-list {
-        font-size: 1rem;
     }
 
 }
