@@ -440,6 +440,10 @@ footer {
         height: 180px;
     }
 
+    .plo-left {
+        padding: 50px 0;
+    }
+
     /* #skill */
     .skill-list h3 {
         font-size: 1.25rem;
