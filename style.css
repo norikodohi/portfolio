@@ -8,6 +8,7 @@ body {
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     color: #343434;
     line-height: 2rem;
+    background-color: #fff;
 }
 
 .hidden {
@@ -99,7 +100,7 @@ img {
 /* .top-visual
 ----------------------------------------- */
 .top-visual {
-    background-image: url(img/flower.jpg);
+    background-image: url(img/flower.png);
     width: 100%;
     min-height: 100vh;
     background-position: right center;
@@ -204,9 +205,6 @@ img {
 ----------------------------------------- */
 #works {
     /* background-image: url(img/flower.jpg); */
-    background-image:
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 30%,
-            rgba(255, 255, 255, 1) 80%), url(img/flower.jpg);
     background-size: cover;
     background-position: right bottom;
 }
@@ -253,6 +251,10 @@ footer {
 
     h2 {
         font-size: 2rem;
+    }
+
+    h2 span {
+        font-size: .725rem;
     }
 
     /* .sp-gnav */
@@ -314,7 +316,7 @@ footer {
     #sp-gnav li a:hover {
         color: #51c6f5;
     }
-        
+
     .openbtn {
         position: fixed;
         z-index: 9999;
@@ -375,7 +377,7 @@ footer {
 
     .top-visual p {
         font-size: 1.5rem;
-    }    
+    }
 
     /* #plofile */
     #plofile {
@@ -400,7 +402,7 @@ footer {
     .skill-list li:nth-child(2) {
         padding: 30px 0;
     }
-    
+
     /* #contact */
     .con-list {
         font-size: 1.25rem;
@@ -411,6 +413,27 @@ footer {
     body {
         font-size: .8rem;
         line-height: 1.6rem;
+    }
+
+    h2 {
+        margin-bottom: 25rem;
+    }
+
+    #greeting,
+    #skill,
+    #works,
+    #contact {
+        padding: 30px 0;
+    }
+
+    /* #skill */
+    .skill-list h3 {
+        font-size: 1.25rem;
+    }
+
+    /* #contact */
+    .con-list {
+        font-size: 1rem;
     }
 
 }
