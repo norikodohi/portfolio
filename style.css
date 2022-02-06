@@ -9,8 +9,7 @@ body {
     color: #343434;
     line-height: 1.8rem;
     background-color: #fff;
-    font-weight: 400;
-    font-size: .875rem;
+    font-weight: 300;
 }
 
 .hidden {
@@ -143,10 +142,9 @@ img {
 /* #greeting
 ----------------------------------------- */
 #greeting p {
-    max-width: 600px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 25px;
-    line-height: 2.5rem;
     text-align: center;
 }
 
@@ -163,7 +161,6 @@ img {
 
 .plo-list {
     text-align: center;
-    line-height: 2.25rem;
 }
 
 .plo-left {
@@ -227,12 +224,6 @@ img {
     background-color: #486d7d;
     color: #fff;
     text-align: center;
-}
-
-.con-list {
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-    line-height: 2.5rem;
 }
 
 /* footer
@@ -409,7 +400,7 @@ footer {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 630px) {
     /* #greeting */
     #greeting p {
         text-align-last: left;
@@ -417,6 +408,10 @@ footer {
 
     #greeting p br {
         display: none;
+    }
+
+    #greeting p br:nth-child(3) {
+        display: block;
     }
 }
 
@@ -459,4 +454,11 @@ footer {
         font-size: 1.25rem;
     }
 
+}
+
+@media (max-width: 380px) {
+    /* #plofile */
+    .plo-list {
+        font-size: .8rem;
+    }
 }
