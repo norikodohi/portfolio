@@ -7,7 +7,7 @@ html {
 body {
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     color: #343434;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 
 a {
@@ -21,14 +21,17 @@ li {
 
 h2 {
     font-family: "Khula", sans-serif;
-    font-size: 2rem;
-    letter-spacing: .25rem;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 h2 span {
     display: block;
     font-size: .875rem;
+    font-weight: normal;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 img {
@@ -36,8 +39,9 @@ img {
 }
 
 .wrapper {
-    max-width: 1024px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* .pc-header
@@ -45,10 +49,10 @@ img {
 .pc-header {
     width: 100%;
     background: #fff;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     left: 0;
@@ -64,14 +68,142 @@ img {
 .pc-gnav-list {
     display: flex;
     font-family: "Khula", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     gap: 60px;
     letter-spacing: 0.13rem;
+}
+
+.pc-gnav-list a {
+    transition: all 0.2s;
 }
 
 .pc-gnav-list a:hover {
     color: #51c6f5;
 }
+
+/* .sp-header */
+
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: #fff;
+    /*動き*/
+    transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#g-nav.panelactive ul {
+    display: block;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#g-nav li a {
+    font-family: "Khula", sans-serif;
+    color: #343434;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.25rem;
+    transition: all 0.3s;
+}
+
+#g-nav li a:hover {
+    color: #51c6f5;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+/*×に変化*/
+.openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 0;
+    height: 1px;
+    border-radius: 5px;
+    background-color: #343434;
+    width: 80%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 0px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    top: 30px;
+    left: 0px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 70%;
+}
+
+
+
 
 /* .top-visual
 ----------------------------------------- */
@@ -110,21 +242,24 @@ img {
 .top-visual img {
     width: 300px;
 }
+
 /* #greeting
 ----------------------------------------- */
 #greeting {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .gr-1 {
     font-weight: bold;
     font-size: 1.5rem;
-    text-align: center;
     margin: 40px 0;
+    text-align: center;
 }
 
 .gr-2 {
-    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* #plofile
@@ -134,28 +269,29 @@ img {
     color: #fff;
 }
 
-.plo-left {
-    flex: 1;
-    background-color: #486d7d;
-    padding: 60px 0;
+#plofile h2 {
+    margin-bottom: 30px;
 }
 
 .plo-list {
     text-align: center;
-    margin-top: 45px;
+}
+
+.plo-left {
+    background-color: #486d7d;
+    padding: 60px 0;
+    width: 50%;
 }
 
 .plo-right {
-    flex: 1;
-    background-image: url(img/me.jpg);
-    background-size: cover;
-    background-position: 0 center;
+    width: 50%;
+    object-fit: cover;
 }
 
 /* #skill
 ----------------------------------------- */
 #skill {
-    padding: 60px 0;
+    padding: 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,7 +301,6 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    margin-top: 40px;
 }
 
 .skill-list h3 {
@@ -181,31 +316,31 @@ img {
 .skill-list img {
     display: block;
     margin: 30px auto;
-    height: 100px;
+    height: 85px;
     width: auto;
-}
-
-.skill-line {
-    height: 1px;
-    width: 100%;
-    background-color: #343434;
-    margin-bottom: 60px;
 }
 
 /* #works
 ----------------------------------------- */
 #works {
-    padding: 60px 0;
-    background-image: url(img/flower.jpg);
+    padding: 80px 0;
+    /* background-image: url(img/flower.jpg); */
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 30%,
+            rgba(255, 255, 255, 1) 80%), url(img/flower.jpg);
     background-size: cover;
-    background-position: right center;
-    background-attachment: fixed;
+    background-position: right bottom;
+}
+
+#works ul {
+    display: flex;
+    gap: 30px;
 }
 
 /* #contact
 ----------------------------------------- */
 #contact {
-    padding: 60px 0;
+    padding: 80px 0;
     background-color: #486d7d;
     color: #fff;
 }
@@ -228,5 +363,42 @@ footer {
     color: #9f9f9f;
     text-align: center;
     font-family: "Khula", sans-serif;
-    padding: 40px;
+    padding: 25px;
+}
+
+/* ここからレスポンシブ
+----------------------------------------- */
+@media (max-width: 768px) {
+    .pc-header {
+        display: none;
+    }
+
+    /* .sp-header */
+    .openbtn1 {
+        display: block;
+    }
+
+    /* #plofile */
+    #plofile {
+        flex-direction: column-reverse;
+    }
+
+    .plo-left {
+        width: 100%;
+    }
+
+    .plo-right {
+        width: 100%;
+        height: 280px;
+        object-position: center bottom;
+    }
+
+    /* #skill */
+    .skill-list {
+        flex-direction: column;
+    }
+
+    .skill-list li:nth-child(2) {
+        padding: 30px 0;
+    }
 }
