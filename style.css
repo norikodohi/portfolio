@@ -161,18 +161,36 @@ img {
     justify-content: center;
 }
 
-#skill img {
+.skill-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-list h3 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.skill-list li {
+    flex: 1;
+}
+
+.skill-list img {
     display: block;
-    margin: 60px auto 60px;
+    margin: 30px auto;
+    height: 100px;
+    width: auto;
 }
 
 .skill-line {
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color: #343434;
     margin-bottom: 60px;
 }
-
 
 /* #works
 ----------------------------------------- */
