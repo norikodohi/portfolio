@@ -5,10 +5,12 @@ html {
 }
 
 body {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     color: #343434;
     line-height: 1.8rem;
     background-color: #fff;
+    font-weight: 400;
+    font-size: .875rem;
 }
 
 .hidden {
@@ -141,9 +143,11 @@ img {
 /* #greeting
 ----------------------------------------- */
 #greeting p {
-    max-width: 650px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 25px;
+    line-height: 2.5rem;
+    text-align: center;
 }
 
 /* #plofile
@@ -159,6 +163,7 @@ img {
 
 .plo-list {
     text-align: center;
+    line-height: 2.25rem;
 }
 
 .plo-left {
@@ -227,6 +232,7 @@ img {
 .con-list {
     font-size: 1rem;
     letter-spacing: 0.08em;
+    line-height: 2.5rem;
 }
 
 /* footer
@@ -401,6 +407,17 @@ footer {
         padding: 30px 0;
     }
 
+}
+
+@media (max-width: 600px) {
+    /* #greeting */
+    #greeting p {
+        text-align-last: left;
+    }
+
+    #greeting p br {
+        display: none;
+    }
 }
 
 @media (max-width: 414px) {
