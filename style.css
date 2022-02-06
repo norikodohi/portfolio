@@ -10,6 +10,10 @@ body {
     line-height: 2rem;
 }
 
+.hidden {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: #343434;
@@ -39,9 +43,17 @@ img {
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.openbtn {
+    display: none;
+}
+
+#sp-gnav ul {
+    display: none;
 }
 
 /* .pc-header
@@ -81,134 +93,12 @@ img {
     color: #51c6f5;
 }
 
-/* .sp-header */
-
-#g-nav {
-    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
-    position: fixed;
-    z-index: -1;
-    opacity: 0;
-    /*はじめは透過0*/
-    /*ナビの位置と形状*/
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    /*ナビの高さ*/
-    background: #fff;
-    /*動き*/
-    transition: all 0.3s;
-}
-
-/*アクティブクラスがついたら透過なしにして最前面へ*/
-#g-nav.panelactive {
-    opacity: 1;
-    z-index: 999;
-}
-
-/*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list {
-    /*ナビの数が増えた場合縦スクロール*/
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100vh;
-    /*表示する高さ*/
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-/*ナビゲーション*/
-#g-nav ul {
-    display: none;
-    /*ナビゲーション天地中央揃え*/
-    position: absolute;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#g-nav.panelactive ul {
-    display: block;
-}
-
-/*リストのレイアウト設定*/
-
-#g-nav li {
-    list-style: none;
-    text-align: center;
-}
-
-#g-nav li a {
-    font-family: "Khula", sans-serif;
-    color: #343434;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 1.25rem;
-    transition: all 0.3s;
-}
-
-#g-nav li a:hover {
-    color: #51c6f5;
-}
-
-/*========= ボタンのためのCSS ===============*/
-.openbtn1 {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    /*ボタンを最前面に*/
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-}
-
-/*×に変化*/
-.openbtn1 span {
-    display: inline-block;
-    transition: all .4s;
-    position: absolute;
-    left: 0;
-    height: 1px;
-    border-radius: 5px;
-    background-color: #343434;
-    width: 80%;
-}
-
-.openbtn1 span:nth-of-type(1) {
-    top: 15px;
-}
-
-.openbtn1 span:nth-of-type(2) {
-    top: 23px;
-}
-
-.openbtn1.active span:nth-of-type(1) {
-    top: 18px;
-    left: 0px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 70%;
-}
-
-.openbtn1.active span:nth-of-type(2) {
-    top: 30px;
-    left: 0px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 70%;
-}
-
-
-
 
 /* .top-visual
 ----------------------------------------- */
 .top-visual {
     background-image: url(img/flower.jpg);
+    width: 100%;
     min-height: 100vh;
     background-position: right center;
     background-size: cover;
@@ -249,14 +139,7 @@ img {
     padding: 80px 0;
 }
 
-.gr-1 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 40px 0;
-    text-align: center;
-}
-
-.gr-2 {
+#greeting p {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 15px;
@@ -373,9 +256,126 @@ footer {
         display: none;
     }
 
-    /* .sp-header */
-    .openbtn1 {
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* .sp-gnav */
+    #sp-gnav {
+        /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        /*はじめは透過0*/
+        /*ナビの位置と形状*/
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        /*ナビの高さ*/
+        background: #fff;
+        /*動き*/
+        transition: all 0.3s;
+    }
+
+    /*アクティブクラスがついたら透過なしにして最前面へ*/
+    #sp-gnav.panelactive {
+        opacity: 1;
+        z-index: 999;
+    }
+
+    /*ナビゲーション*/
+    #sp-gnav ul {
+        display: none;
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #sp-gnav.panelactive ul {
         display: block;
+    }
+
+    /*リストのレイアウト設定*/
+
+    #sp-gnav li {
+        list-style: none;
+        text-align: center;
+    }
+
+    #sp-gnav li a {
+        color: #343434;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: "Khula", sans-serif;
+        transition: all 0.3s;
+    }
+
+    #sp-gnav li a:hover {
+        color: #51c6f5;
+    }
+        
+    .openbtn {
+        position: fixed;
+        z-index: 9999;
+        /*ボタンを最前面に*/
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        display: block;
+    }
+
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 1px;
+        border-radius: 5px;
+        background-color: #343434;
+        width: 60%;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 40%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 40%;
+    }
+
+    /* .top-visual */
+    .top-visual h1 {
+        font-size: 3rem;
     }
 
     /* #plofile */
@@ -400,5 +400,12 @@ footer {
 
     .skill-list li:nth-child(2) {
         padding: 30px 0;
+    }
+}
+
+@media (max-width: 414px) {
+    body {
+        font-size: .8rem;
+        line-height: 1.6rem;
     }
 }
