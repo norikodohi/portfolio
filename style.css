@@ -7,7 +7,7 @@ html {
 body {
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     color: #343434;
-    line-height: 2rem;
+    line-height: 1.8rem;
     background-color: #fff;
 }
 
@@ -37,6 +37,7 @@ h2 {
     letter-spacing: .25rem;
     text-align: center;
     margin-bottom: 40px;
+    font-weight: 600;
 }
 
 h2 span {
@@ -112,6 +113,7 @@ img {
     justify-content: center;
     font-family: "Khula", sans-serif;
     letter-spacing: .5rem;
+    font-weight: 600;
 }
 
 .top-visual h1 {
@@ -219,18 +221,12 @@ img {
 #contact {
     background-color: #486d7d;
     color: #fff;
+    text-align: center;
 }
 
 .con-list {
-    font-size: 1.7rem;
-    font-family: 'Gentium Book Basic', serif;
-    text-align: center;
-    margin-top: 30px;
+    font-size: 1rem;
     letter-spacing: 0.08em;
-}
-
-.con-list li:first-child {
-    margin-bottom: 18px;
 }
 
 /* footer
@@ -373,6 +369,7 @@ footer {
     /* .top-visual */
     .top-visual h1 {
         font-size: 3rem;
+        margin-top: 0;
     }
 
     .top-visual p {
@@ -403,18 +400,9 @@ footer {
         padding: 30px 0;
     }
 
-    /* #contact */
-    .con-list {
-        font-size: 1.25rem;
-    }
 }
 
 @media (max-width: 414px) {
-    body {
-        font-size: .8rem;
-        line-height: 1.6rem;
-    }
-
     h2 {
         margin-bottom: 30px;
     }
