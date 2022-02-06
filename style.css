@@ -54,7 +54,7 @@ img {
 .wrapper {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .openbtn {
@@ -84,7 +84,7 @@ img {
 .pc-gnav-list {
     display: flex;
     font-family: "Khula", sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     gap: 60px;
     letter-spacing: 0.13rem;
 }
@@ -94,7 +94,7 @@ img {
 }
 
 .pc-gnav-list a:hover {
-    color: #51c6f5;
+    color: #5c9bcc;
 }
 
 
@@ -143,7 +143,7 @@ img {
 #greeting p {
     max-width: 650px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 25px;
 }
 
 /* #plofile
@@ -307,10 +307,11 @@ footer {
         letter-spacing: 0.1em;
         font-family: "Khula", sans-serif;
         transition: all 0.3s;
+        font-size: 1.125rem;
     }
 
     #sp-gnav li a:hover {
-        color: #51c6f5;
+        color: #5c9bcc;
     }
 
     .openbtn {
