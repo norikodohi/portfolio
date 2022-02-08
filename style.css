@@ -189,10 +189,12 @@ img {
     font-weight: normal;
     font-size: 1.5rem;
     text-align: center;
+    color: #486D7D;
 }
 
 .skill-list li {
     flex: 1;
+    line-height: 1.8rem;
 }
 
 .skill-list img {
@@ -368,6 +370,10 @@ footer {
     }
 
     /* #plofile */
+
+    #plofile h2 {
+        text-align: center;
+    }
 
     .plo-contents {
         flex-direction: column;
