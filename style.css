@@ -257,7 +257,22 @@ footer {
         z-index: 3333;
     }
 
+    .openbtn::before {
+        content: "menu";
+        position: absolute;
+        top: 5px;
+        left: -60px;
+        font-family: 'Libre Baskerville', serif;
+        font-size: .75rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .openbtn.active::before {
+        content: "close";
+    }
+
     .openbtn {
+        position: relative;
         position: fixed;
         z-index: 9999;
         /*ボタンを最前面に*/
@@ -267,6 +282,7 @@ footer {
         width: 50px;
         height: 50px;
     }
+
 
     .openbtn span {
         display: inline-block;
@@ -280,15 +296,11 @@ footer {
     }
 
     .openbtn span:nth-of-type(1) {
-        top: 15px;
+        top: 18px;
     }
 
     .openbtn span:nth-of-type(2) {
-        top: 23px;
-    }
-
-    .openbtn span:nth-of-type(3) {
-        top: 31px;
+        top: 26px;
     }
 
     .openbtn.active span:nth-of-type(1) {
@@ -299,10 +311,6 @@ footer {
     }
 
     .openbtn.active span:nth-of-type(2) {
-        opacity: 0;
-    }
-
-    .openbtn.active span:nth-of-type(3) {
         top: 30px;
         left: 18px;
         transform: translateY(-6px) rotate(45deg);
@@ -392,6 +400,12 @@ footer {
     .skill-list img {
         height: 85px;
     }
+
+    /* works */
+    #works ul {
+        flex-direction: column;
+        align-items: center;
+    }    
 }
 
 @media (max-width: 680px) {
