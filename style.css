@@ -386,8 +386,8 @@ footer {
         flex-direction: column;
         gap: 40px;
         align-items: center;
-        }
-    
+    }
+
     /* #skill */
     .skill-list {
         flex-direction: column;
@@ -405,7 +405,7 @@ footer {
     #works ul {
         flex-direction: column;
         align-items: center;
-    }    
+    }
 }
 
 @media (max-width: 680px) {
@@ -443,6 +443,10 @@ footer {
         padding: 50px 0;
     }
 
+    /* .sp-header */
+    .openbtn::before {
+        top: 10px;
+    }
     /* .topvisual */
     .top-visual h1 {
         font-size: 2.5rem;
@@ -464,4 +468,3 @@ footer {
     }
 
 }
-
