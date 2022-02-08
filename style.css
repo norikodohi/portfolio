@@ -90,7 +90,7 @@ img {
     font-family: 'Libre Baskerville', serif;
     font-size: 1rem;
     gap: 60px;
-    letter-spacing: 0.13rem;
+    letter-spacing: 0.15rem;
 }
 
 .pc-gnav-list a {
@@ -356,10 +356,9 @@ footer {
         text-decoration: none;
         padding: 10px;
         display: block;
-        letter-spacing: 0.1em;
         transition: all 0.3s;
         font-family: 'Libre Baskerville', serif;
-        font-size: 1.125rem;
+        letter-spacing: 0.15rem;
     }
 
     #sp-gnav li a:hover {
