@@ -423,6 +423,7 @@ footer {
     /* #greeting */
     #greeting p {
         text-align: left;
+        line-height: 2rem;
     }
 
     #greeting p br {
@@ -437,7 +438,7 @@ footer {
 @media (max-width: 414px) {
     body {
         font-size: .875rem;
-        line-height: 1.725rem;
+        line-height: 1.75rem;
         letter-spacing: 0.05rem;
     }
 
@@ -469,6 +470,10 @@ footer {
         font-size: 1rem;
     }
 
+    /* #greeting */
+        #greeting p {
+            line-height: 1.75rem;
+        }
     /* plofile */
     .plo-left {
         width: 310px;
