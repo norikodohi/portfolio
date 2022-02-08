@@ -383,7 +383,17 @@ footer {
     .plo-contents {
         flex-direction: column;
         gap: 40px;
-        align-items: center;
+        padding: 0;
+    }
+
+
+    .plo-left {
+        width: 360px;
+        height: 110px;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: -25px;
+        object-position: right 70%;
     }
 
     /* #skill */
@@ -425,7 +435,8 @@ footer {
 @media (max-width: 414px) {
     body {
         font-size: .875rem;
-        line-height: 1.75rem;
+        line-height: 1.725rem;
+        letter-spacing: 0.05rem;
     }
 
     h2 {
@@ -455,7 +466,14 @@ footer {
     }
 
     /* plofile */
+    .plo-left {
+        width: 310px;
+        height: 90px;
+    }
 
+    .plo-list {
+        font-size: 0.725rem;
+    }
     /* #skill */
     .skill-list h3 {
         font-size: 1.125rem;
