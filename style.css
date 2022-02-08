@@ -7,7 +7,7 @@ html {
 body {
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     color: #343434;
-    line-height: 1.8rem;
+    line-height: 2.25rem;
     background-color: #fff;
     font-weight: 300;
     letter-spacing: 0.08rem;
@@ -27,10 +27,11 @@ li {
 }
 
 #greeting,
+#plofile,
 #skill,
 #works,
 #contact {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 h2 {
@@ -38,8 +39,8 @@ h2 {
     font-size: 2rem;
     letter-spacing: .5rem;
     text-align: center;
-    margin-bottom: 40px;
-    font-weight: 600;
+    margin-bottom: 60px;
+    font-weight: 400;
 }
 
 h2 span {
@@ -72,7 +73,7 @@ img {
 ----------------------------------------- */
 .pc-header {
     width: 100%;
-    background: #fff;
+    background-color: #fff;
     height: 100px;
     display: flex;
     align-items: center;
@@ -90,7 +91,6 @@ img {
     font-size: 1rem;
     gap: 60px;
     letter-spacing: 0.13rem;
-    font-weight: bold;
 }
 
 .pc-gnav-list a {
@@ -110,7 +110,6 @@ img {
     min-height: 100vh;
     background-position: right center;
     background-size: cover;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +129,7 @@ img {
     height: 1px;
     background-color: #fff;
     width: 200px;
-    margin: 20px 0;
+    margin: 40px 0 20px;
 }
 
 .top-visual p {
@@ -154,25 +153,22 @@ img {
 /* #plofile
 ----------------------------------------- */
 #plofile {
-    display: flex;
-    color: #fff;
+    background-color: #f0f3f5;
 }
 
 #plofile h2 {
-    margin-bottom: 30px;
+    text-align: left;
 }
 
+.plo-contents {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
 
 .plo-left {
-    background-color: #486d7d;
-    padding: 60px 0;
-    width: 60%;
-    text-align: center;
-}
-
-.plo-right {
-    width: 40%;
-    object-fit: cover;
+    object-fit: contain;
+    width: 260px;
 }
 
 /* #skill
@@ -226,7 +222,7 @@ img {
 /* footer
 ----------------------------------------- */
 footer {
-    border-top: 1px solid #9f9f9f;
+    border-top: 1px solid #d9d9d9;
     color: #9f9f9f;
     text-align: center;
     font-family: "Khula", sans-serif;
@@ -254,7 +250,7 @@ footer {
         display: block;
         width: 100%;
         height: 65px;
-        background: #fff;
+        background-color: #fff;
         position: fixed;
         top: 0;
         left: 0;
@@ -352,17 +348,16 @@ footer {
         text-decoration: none;
         padding: 10px;
         display: block;
-        text-transform: uppercase;
         letter-spacing: 0.1em;
         transition: all 0.3s;
         font-family: 'Libre Baskerville', serif;
         font-size: 1.125rem;
-        font-weight: bold;
     }
 
     #sp-gnav li a:hover {
         color: #5c9bcc;
     }
+
     /* .top-visual */
     .top-visual h1 {
         font-size: 3rem;
@@ -374,20 +369,13 @@ footer {
     }
 
     /* #plofile */
-    #plofile {
-        flex-direction: column-reverse;
-    }
 
-    .plo-left {
-        width: 100%;
-    }
-
-    .plo-right {
-        width: 100%;
-        height: 280px;
-        object-position: center bottom;
-    }
-
+    .plo-contents {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        }
+    
     /* #skill */
     .skill-list {
         flex-direction: column;
@@ -399,7 +387,7 @@ footer {
 
 }
 
-@media (max-width: 630px) {
+@media (max-width: 680px) {
 
     /* #greeting */
     #greeting p {
@@ -418,13 +406,16 @@ footer {
 @media (max-width: 414px) {
     body {
         font-size: .875rem;
+        line-height: 1.75rem;
     }
 
     h2 {
         margin-bottom: 30px;
+        font-size: 1.75rem;
     }
 
     #greeting,
+    #plofile,
     #skill,
     #works,
     #contact {
@@ -441,13 +432,6 @@ footer {
     }
 
     /* plofile */
-    .plo-right {
-        height: 180px;
-    }
-
-    .plo-left {
-        padding: 50px 0;
-    }
 
     /* #skill */
     .skill-list h3 {
@@ -456,10 +440,3 @@ footer {
 
 }
 
-@media (max-width: 380px) {
-
-    /* #plofile */
-    .plo-list {
-        font-size: .8rem;
-    }
-}
