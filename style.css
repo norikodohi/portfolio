@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    color: #343434;
+    color: #1c1c1c;
     line-height: 2.25rem;
     background-color: #fff;
     font-weight: 300;
@@ -19,7 +19,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #343434;
+    color: #1c1c1c;
 }
 
 li {
@@ -114,15 +114,15 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Libre Baskerville', serif;
     letter-spacing: 0.7rem;
-    font-weight: 600;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .top-visual h1 {
     margin-top: 100px;
     font-size: 4rem;
     color: #fff;
+    font-weight: normal;
 }
 
 .h1-line {
@@ -225,7 +225,6 @@ footer {
     border-top: 1px solid #d9d9d9;
     color: #9f9f9f;
     text-align: center;
-    font-family: "Khula", sans-serif;
     padding: 25px;
 }
 
@@ -273,9 +272,9 @@ footer {
         transition: all .4s;
         position: absolute;
         left: 14px;
-        height: 2px;
+        height: 1px;
         border-radius: 5px;
-        background-color: #343434;
+        background-color: #1c1c1c;
         width: 40%;
     }
 
@@ -344,7 +343,7 @@ footer {
     }
 
     #sp-gnav li a {
-        color: #343434;
+        color: #1c1c1c;
         text-decoration: none;
         padding: 10px;
         display: block;
