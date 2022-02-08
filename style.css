@@ -10,6 +10,7 @@ body {
     line-height: 1.8rem;
     background-color: #fff;
     font-weight: 300;
+    letter-spacing: 0.08rem;
 }
 
 .hidden {
@@ -35,7 +36,7 @@ li {
 h2 {
     font-family: "Khula", sans-serif;
     font-size: 2.5rem;
-    letter-spacing: .25rem;
+    letter-spacing: .5rem;
     text-align: center;
     margin-bottom: 40px;
     font-weight: 600;
@@ -85,9 +86,10 @@ img {
 .pc-gnav-list {
     display: flex;
     font-family: "Khula", sans-serif;
-    font-size: 1.125rem;
+    font-size: 1rem;
     gap: 60px;
     letter-spacing: 0.13rem;
+    font-weight: bold;
 }
 
 .pc-gnav-list a {
@@ -159,14 +161,12 @@ img {
     margin-bottom: 30px;
 }
 
-.plo-list {
-    text-align: center;
-}
 
 .plo-left {
     background-color: #486d7d;
     padding: 60px 0;
     width: 60%;
+    text-align: center;
 }
 
 .plo-right {
@@ -252,31 +252,23 @@ footer {
 
     /* .sp-gnav */
     #sp-gnav {
-        /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
         position: fixed;
         z-index: -1;
         opacity: 0;
-        /*はじめは透過0*/
-        /*ナビの位置と形状*/
         top: 0;
         width: 100%;
         height: 100vh;
-        /*ナビの高さ*/
         background: #fff;
-        /*動き*/
         transition: all 0.3s;
     }
 
-    /*アクティブクラスがついたら透過なしにして最前面へ*/
     #sp-gnav.panelactive {
         opacity: 1;
         z-index: 999;
     }
 
-    /*ナビゲーション*/
     #sp-gnav ul {
         display: none;
-        /*ナビゲーション天地中央揃え*/
         position: absolute;
         z-index: 999;
         top: 50%;
@@ -287,8 +279,6 @@ footer {
     #sp-gnav.panelactive ul {
         display: block;
     }
-
-    /*リストのレイアウト設定*/
 
     #sp-gnav li {
         list-style: none;
@@ -305,6 +295,7 @@ footer {
         font-family: "Khula", sans-serif;
         transition: all 0.3s;
         font-size: 1.125rem;
+        font-weight: bold;
     }
 
     #sp-gnav li a:hover {
@@ -328,7 +319,7 @@ footer {
         transition: all .4s;
         position: absolute;
         left: 14px;
-        height: 1px;
+        height: 2px;
         border-radius: 5px;
         background-color: #343434;
         width: 60%;
@@ -403,7 +394,7 @@ footer {
 @media (max-width: 630px) {
     /* #greeting */
     #greeting p {
-        text-align-last: left;
+        text-align: left;
     }
 
     #greeting p br {
